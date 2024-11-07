@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.08.2
+%define		kdeappsver	24.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		krdc
 Summary:	krdc
 Name:		ka6-%{kaname}
-Version:	24.08.2
+Version:	24.08.3
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	ec315730fe22d1a00d433703cd880ec3
+# Source0-md5:	f01470e223b6f2ab3632a7ba52458427
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
@@ -133,9 +133,9 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/qt6/plugins/krdc/kcms
 %attr(755,root,root) %{_libdir}/qt6/plugins/krdc/kcms/libkcm_krdc_rdpplugin.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/krdc/kcms/libkcm_krdc_vncplugin.so
-%attr(755,root,root)%{_libdir}/qt6/plugins/krdc/krdc_rdpplugin.so
-%attr(755,root,root)%{_libdir}/qt6/plugins/krdc/krdc_testplugin.so
-%attr(755,root,root)%{_libdir}/qt6/plugins/krdc/krdc_vncplugin.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/krdc/krdc_rdpplugin.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/krdc/krdc_testplugin.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/krdc/krdc_vncplugin.so
 %{_desktopdir}/org.kde.krdc.desktop
 %{_datadir}/config.kcfg/krdc.kcfg
 %{_datadir}/metainfo/org.kde.krdc.appdata.xml

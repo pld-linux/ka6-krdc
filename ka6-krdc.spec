@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.08.3
+%define		kdeappsver	24.12.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		krdc
 Summary:	krdc
 Name:		ka6-%{kaname}
-Version:	24.08.3
+Version:	24.12.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	f01470e223b6f2ab3632a7ba52458427
+# Source0-md5:	b48dba14f8f2581d245bddea12be45a7
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
@@ -140,6 +140,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/config.kcfg/krdc.kcfg
 %{_datadir}/metainfo/org.kde.krdc.appdata.xml
 %{_datadir}/qlogging-categories6/krdc.categories
+%{_datadir}/mime/packages/org.kde.krdc-mime.xml
 
 %files devel
 %defattr(644,root,root,755)

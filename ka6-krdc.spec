@@ -1,24 +1,24 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.12.3
+%define		kdeappsver	25.04.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		krdc
 Summary:	krdc
 Name:		ka6-%{kaname}
-Version:	24.12.3
+Version:	25.04.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	db0d74a82878496ac8b95e28404a9425
+# Source0-md5:	cb25da1b8286ccb863c4084c9fbc1126
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
 BuildRequires:	Qt6Widgets-devel >= %{qtver}
 BuildRequires:	cmake >= 3.20
-BuildRequires:	freerdp2-devel >= 2.10
+BuildRequires:	freerdp3-devel >= 3.0
 BuildRequires:	gettext-devel
 BuildRequires:	kf6-extra-cmake-modules >= %{kframever}
 BuildRequires:	kf6-kbookmarks-devel >= %{kframever}
@@ -141,6 +141,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/metainfo/org.kde.krdc.appdata.xml
 %{_datadir}/qlogging-categories6/krdc.categories
 %{_datadir}/mime/packages/org.kde.krdc-mime.xml
+%{_iconsdir}/hicolor/scalable/apps/krdc.svg
 
 %files devel
 %defattr(644,root,root,755)

@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	26.04.1
+%define		kdeappsver	26.04.2
 %define		kframever	5.94.0
-%define		qtver		5.15.2
+%define		qtver		6.10.0
 %define		kaname		krdc
 Summary:	krdc
 Name:		ka6-%{kaname}
-Version:	26.04.1
+Version:	26.04.2
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	00ac63f84fd40bb65850a7e11728797c
+# Source0-md5:	0107543bc63923a4ad1e8e7d641412eb
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
@@ -41,7 +41,7 @@ BuildRequires:	kf6-kxmlgui-devel >= %{kframever}
 BuildRequires:	libssh-devel
 BuildRequires:	libvncserver-devel >= 0.9
 BuildRequires:	ninja
-BuildRequires:	qt5-build >= %{qtver}
+BuildRequires:	qt6-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	shared-mime-info
 BuildRequires:	tar >= 1:1.22
